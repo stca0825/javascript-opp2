@@ -161,8 +161,6 @@ fullføres ved å bruke passende array-metoder.
 
 *******************************************************************************/
 
-const items = ["Bok", "Penn", "Notatbok", "Viskelær", "Blyant", "Markør"];
-
 /*******************************************************************************
 Steg 1: Fjern det første elementet ("Bok") fra arrayen ved hjelp av riktig metode.
 
@@ -176,7 +174,24 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 
 ******************************************************************************/
 
-// Skriv koden for oppgave 6 her
+const items = ["Bok", "Penn", "Notatbok", "Viskelær", "Blyant", "Markør"];
+
+items.shift();
+
+let indexViskelær = items.indexOf("Viskelær");
+if (indexViskelær !== -1) {
+  items.splice(indexViskelær, 1, "Linjal");
+}
+
+let indexPenn = items.indexOf("Penn");
+if (indexPenn !== -1) {
+  items.splice(indexPenn, 2, "Markeringspenn");
+}
+
+let combined = items.join(" | ");
+
+console.log("Etter alle steg", items);
+console.log("Combined string", combined);
 
 /******************************************************************************
 7.
